@@ -52,33 +52,7 @@ public class HospitalOperationsController {
 		 return  "register_doctor";
 	}
 	
-	//draback: scope of map is only upto request level
-//	@PostMapping("/add")   // P-POST
-//		public  String  registerDoctor(Map<String,Object> map, @ModelAttribute("dvo") DoctorVO vo) {
-//			System.out.println("HospitalOperationsController.registerDoctor()");
-//	      //use service 
-//			String msg=doctorService.registerDoctor(vo);
-//			//keep the result in Model Attribute
-//			map.put("resultMsg",msg);
-//			//return LVN
-//			return "redirect:report";  // R--Redirect
-//		}
-	
-	//draback of RedirectAttributes: when you refresh the data will disappear
-	// Flash attributes are available only for the next request after redirect and are removed automatically.
-	// Flash attributes disappear after they are accessed once (e.g., a page refresh after the redirect won't show them again).
-//	@PostMapping("/add")   // P-POST
-//	public  String  registerDoctor(RedirectAttributes attrs, @ModelAttribute("dvo") DoctorVO vo) {
-//		System.out.println("HospitalOperationsController.registerDoctor()");
-//	  //use service 
-//		String msg=doctorService.registerDoctor(vo);
-//		//keep the result in Model Attribute
-//		attrs.addFlashAttribute("resultMsg",msg);
-//		//return LVN
-//		return "redirect:report";  // R--Redirect
-//	}
-
-	@PostMapping("/add")   // P-POST
+		@PostMapping("/add")   // P-POST
 	public  String  registerDoctor(HttpSession ses, @ModelAttribute("dvo") DoctorVO vo) {
 		System.out.println("HospitalOperationsController.registerDoctor()");
 	  //use service 
