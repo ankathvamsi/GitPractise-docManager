@@ -86,15 +86,15 @@ public class HospitalOperationsController {
 		return  "redirect:report";
 	}
 	
-	@GetMapping("/delete")
-	public  String  deleteDoctor(@RequestParam  Integer id,
-			                                         Map<String,Object> map) {
-		//use service
-		String msg=doctorService.removeDoctorById(id);
-		//keep the result in  shared memory
-		map.put("resultMsg", msg);
-		//return LVN
-		return  "forward:report";
-	}
+	// @GetMapping("/delete")
+	// public  String  deleteDoctor(@RequestParam  Integer id,
+	// 		                                         Map<String,Object> map) {
+	// 	//use service
+	// 	String msg=doctorService.removeDoctorById(id);
+	// 	//keep the result in  shared memory
+	// 	map.put("resultMsg", msg);
+	// 	//return LVN
+	// 	return  "forward:report";
+	// }
 
 }
